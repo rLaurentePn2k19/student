@@ -1,7 +1,8 @@
 class student {
-    constructor(name, schedule, course) {
+
+    constructor(name, course) {
         this.name = name;
-        this.schedule = schedule;
+        this.schedule = {};
         this.course = course;
     }
 
@@ -9,45 +10,28 @@ class student {
         this.name = name
     }
 
-    getName(){
-        return name;
-    }
+    setSchedule(day,time){
+        this.schedule[day] = time;
 
-    setSchedule(schedule, time){
-        this.schedule = schedule;
-        this.time = time;
-    }
-
-    getSchedule(){
-        return schedule;
     }
 
     setCourse(course, year ){
         this.course = course;
         this.year = year;
     }
-
-    getCourse(){
-        return course;
-    }
     
     addName(name) {
         this.name = name;
     }
 
-    addSchedule(schedule, time) {
-        this.schedule = schedule;
-        this.time = time
+    addSchedule(day,time) {
+        this.schedule[day] = time;
     }
 
     addCourse(course, year) {
         this.course = course
         this.year = year 
     }  
-
-    removeName(name){
-        this.name = name;
-    }
 }
 
 
